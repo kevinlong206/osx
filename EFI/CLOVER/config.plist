@@ -4,6 +4,8 @@
 <dict>
 	<key>ACPI</key>
 	<dict>
+		<key>AutoMerge</key>
+		<true/>
 		<key>DSDT</key>
 		<dict>
 			<key>Fixes</key>
@@ -87,14 +89,24 @@
 				<key>PluginType</key>
 				<true/>
 			</dict>
+			<key>NoDynamicExtract</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>keepsyms=1 dart=0 debug=0x100 slide=0 agdpmod=pikera darkwake=2</string>
+		<string>keepsyms=1 dart=0 debug=0x100 slide=0 darkwake=2</string>
+		<key>DefaultLoader</key>
+		<string>boot.efi</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
+		<key>Legacy</key>
+		<string>PBR</string>
+		<key>NeverDoRecovery</key>
+		<true/>
+		<key>NeverHibernate</key>
+		<true/>
 		<key>Timeout</key>
 		<integer>5</integer>
 		<key>XMPDetection</key>
@@ -112,13 +124,15 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<integer>11</integer>
+			<string>No</string>
 			<key>ResetHDA</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>USB</key>
 		<dict>
 			<key>FixOwnership</key>
+			<true/>
+			<key>Inject</key>
 			<true/>
 		</dict>
 	</dict>
@@ -129,6 +143,11 @@
 			<string>Preboot</string>
 			<string>Recovery</string>
 		</array>
+		<key>Mouse</key>
+		<dict>
+			<key>Enabled</key>
+			<true/>
+		</dict>
 		<key>Scan</key>
 		<dict>
 			<key>Entries</key>
@@ -260,26 +279,63 @@
 		<key>MLB</key>
 		<string></string>
 		<key>ROM</key>
-		<string>UseMacAddr0</string>
+		<data>PBXCyBgu</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
+		<key>BiosReleaseDate</key>
+		<string>10/30/2019</string>
+		<key>BiosVendor</key>
+		<string>Apple Inc.</string>
+		<key>BiosVersion</key>
+		<string>IM191.88Z.F000.B00.1910301745</string>
+		<key>Board-ID</key>
+		<string>Mac-AA95B1DDAB278B95</string>
+		<key>BoardManufacturer</key>
+		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string></string>
-		<key>Memory</key>
-		<dict>
-			<key>Channels</key>
-			<integer>0</integer>
-		</dict>
+		<string>C02932310GULNV9UE</string>
+		<key>BoardType</key>
+		<integer>10</integer>
+		<key>BoardVersion</key>
+		<string>1.0</string>
+		<key>ChassisAssetTag</key>
+		<string>iMac-Aluminum</string>
+		<key>ChassisManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>ChassisType</key>
+		<string>0x09</string>
+		<key>EfiVersion</key>
+		<string>1037.60.50.0.0</string>
+		<key>Family</key>
+		<string>iMac</string>
+		<key>FirmwareFeatures</key>
+		<string>0xFD8FF576</string>
+		<key>FirmwareFeaturesMask</key>
+		<string>0xFFDFFF7F</string>
+		<key>LocationInChassis</key>
+		<string>Part Component</string>
+		<key>Manufacturer</key>
+		<string>Apple Inc.</string>
+		<key>Mobile</key>
+		<false/>
+		<key>PlatformFeature</key>
+		<string>0x22</string>
 		<key>ProductName</key>
-		<string>iMacPro1,1</string>
+		<string>iMac19,1</string>
 		<key>SerialNumber</key>
-		<string></string>
+		<string>C02Z67Z4JV3Q</string>
 		<key>SmUUID</key>
-		<string></string>
+		<string>645E8CAE-67E5-4EC6-B1D2-13D9291D1C96</string>
+		<key>Trust</key>
+		<true/>
+		<key>Version</key>
+		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
+		<key>CustomUUID</key>
+		<string>B50B5AE2-EB75-44ED-9D95-FF0583D91D81</string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
